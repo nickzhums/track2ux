@@ -19,13 +19,14 @@ To set these values as environment variables, you can follow these documentation
 
 ## Authentication
 
-Now that the environment is setup, all you need to do is to create an authenticated client. Our default option is to use **DefaultAzureCredentials** and in this guide we have picked **Compute** as our target service. To authenticate to Azure and create a REST client, simply do the following:
+Now that the environment is setup, all you need to do is to create an authenticated client. Our default option is to use **DefaultAzureCredentials** and in this guide we have picked **Resource** as our target service. To authenticate to Azure and create a REST client, simply do the following:
 ```
 using  Azure.Identity;
-using  Azure.Management.Compute;
+using  Azure.Management.Resource;
+using  Azure.Management.Resource.Models;
 ...
 
-var  computeClient = new  ComputeClient(subscriptionId, new  DefaultAzureCredential(true));
+var resourceClient = new ResourceClient(subscriptionId, new  DefaultAzureCredential(true));
 ```
 
 More information regarding Azure SDK authentication can be found [here](https://azure.github.io/azure-sdk/posts/2020-02-25/defaultazurecredentials.html)
@@ -33,9 +34,15 @@ More information regarding Azure SDK authentication can be found [here](https://
 
 ## Managing Resources
 
-Now that we are authenticated, we can use our REST client to make API calls. Take compute for example, let's play around with xxx
+Now that we are authenticated, we can use our REST client to make API calls. Let's create a resource group and demostrate REST client's usage
 
-**Create**
+**Create a resouce group**
+
+```
+// Create Resource Group
+var location = "westus2";
+await resourceClient.ResourceGroups.CreateOrUpdateAsync(resourceGroup, new ResourceGroup(location));
+```
 
 **Update**
 
