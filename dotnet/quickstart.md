@@ -10,11 +10,11 @@ You will need to set the following values as environment variables
 -   `AZURE_TENANT_ID`
 
 The information can be obtained from the portal, here's the instructions:
-[How to get Azure credentials from portal]([https://www.inkoop.io/blog/how-to-get-azure-api-credentials/](https://www.inkoop.io/blog/how-to-get-azure-api-credentials/))
+[How to get Azure credentials from portal](https://www.inkoop.io/blog/how-to-get-azure-api-credentials/](https://www.inkoop.io/blog/how-to-get-azure-api-credentials/)
 
 To set these values as environment variables, you can follow these documentation
-[Windows]([https://www.computerhope.com/issues/ch000549.htm](https://www.computerhope.com/issues/ch000549.htm))
-[Linux]([https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/))
+[Windows](https://www.computerhope.com/issues/ch000549.htm)
+[Linux](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/)
 
 ## Authentication
 
@@ -27,7 +27,7 @@ using  Azure.Management.Compute;
 var  computeClient = new  ComputeClient(subscriptionId, new  DefaultAzureCredential(true));
 ```
 
-More information regarding Azure SDK authentication can be found [here]([https://azure.github.io/azure-sdk/posts/2020-02-25/defaultazurecredentials.html](https://azure.github.io/azure-sdk/posts/2020-02-25/defaultazurecredentials.html))
+More information regarding Azure SDK authentication can be found [here](https://azure.github.io/azure-sdk/posts/2020-02-25/defaultazurecredentials.html)
 
 
 ## Managing Resources
