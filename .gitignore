@@ -1,0 +1,12 @@
+# Builds #
+dotnet/bin/
+dotnet/out/
+dotnet/tmp/
+dotnet/obj/
+
+# VS Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
