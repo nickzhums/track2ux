@@ -24,7 +24,8 @@ namespace Track2UXCodeSample {
 
             Console.WriteLine(resourceClient);
 
-            await resourceClient.ResourceGroups.CreateOrUpdateAsync("testname123", new ResourceGroup(location));
+            var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync("lightvsdark", new ResourceGroup(location));
+            Console.WriteLine(result);
 
         }
 
