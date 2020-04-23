@@ -10,11 +10,12 @@ You will need to set the following values as environment variables
 -   `AZURE_TENANT_ID`
 
 The information can be obtained from the portal, here's the instructions:
-[How to get Azure credentials from portal](https://www.inkoop.io/blog/how-to-get-azure-api-credentials/](https://www.inkoop.io/blog/how-to-get-azure-api-credentials/)
+
+[How to get Azure credentials from portal](https://www.inkoop.io/blog/how-to-get-azure-api-credentials/)
 
 To set these values as environment variables, you can follow these documentation
-[Windows](https://www.computerhope.com/issues/ch000549.htm)
-[Linux](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/)
+
+[Windows](https://www.computerhope.com/issues/ch000549.htm) / [Linux](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/)
 
 ## Authentication
 
