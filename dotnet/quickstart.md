@@ -26,7 +26,7 @@ using  Azure.Management.Resource;
 using  Azure.Management.Resource.Models;
 ...
 
-var resourceClient = new ResourceClient(subscriptionId, new  DefaultAzureCredential(true));
+var resourceClient = new ResourceClient(subscriptionId, new DefaultAzureCredential(true));
 ```
 
 More information regarding Azure SDK authentication can be found [here](https://azure.github.io/azure-sdk/posts/2020-02-25/defaultazurecredentials.html)
