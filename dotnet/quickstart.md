@@ -39,14 +39,19 @@ Now that we are authenticated, we can use our REST client to make API calls. Let
 **Create a resouce group**
 
 ```
-// Create Resource Group
 var location = "westus2";
-await resourceClient.ResourceGroups.CreateOrUpdateAsync(resourceGroup, new ResourceGroup(location));
+var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync(resourceGroup, new ResourceGroup(location));
 ```
 
 **Update**
 
-**Get**
+**List all resouce groups**
+```
+var result = await resourceClient.ResourceGroups.ListAsync(resourceGroup, new ResourceGroup(location));
+foreach (var resourceGroup in result) {
+    Console.WriteLine("Resouce group: " + resourceGroup.Name);
+}
+```
 
 **Delete**
 

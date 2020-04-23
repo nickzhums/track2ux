@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections;
 using Microsoft.Azure.Management.ResourceManager;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Models;
@@ -24,8 +25,14 @@ namespace Track2UXCodeSample {
 
             Console.WriteLine(resourceClient);
 
-            var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync("lightvsdark", new ResourceGroup(location));
-            Console.WriteLine(result);
+            //var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync("lightvsdark", new ResourceGroup(location));
+            //Console.WriteLine(result);
+
+            // List
+            var rgs = await resourceClient.ResourceGroups.ListAsync();
+            foreach (ResourceGroup rg in rgs) {
+                Console.WriteLine(rg.Name);
+            }
 
         }
 
