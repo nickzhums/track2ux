@@ -1,6 +1,6 @@
-# Quickstart Tutorial - Resource Management using Azure .NET SDK
+# Welcome to Python SDK UX Study
 
-In this basic quickstart guide, we will walk you through how to authenticate to Azure using our .NET SDK and start interacting with Azure resources.  There are several possible approaches to authentication. This document illustrates the most common scenario
+In this basic quickstart guide, we will walk you through how to authenticate to Azure using our Python SDK and start interacting with Azure resources. There are several possible approaches to authentication. This document illustrates the most common scenario
 
 ## Prerequisites
 You will need to set the following values as environment variables 
@@ -21,16 +21,18 @@ To set these values as environment variables, you can follow these documentation
 
 Now that the environment is setup, all you need to do is to create an authenticated client. Our default option is to use **DefaultAzureCredentials** and in this guide we have picked **Resource** as our target service. To authenticate to Azure and create a REST client, simply do the following:
 ```
-using  Azure.Identity;
-using  Azure.Management.Resource;
-using  Azure.Management.Resource.Models;
+import azure.mgmt.resource
+import azure.mgmt.network
+import azure.mgmt.compute
+from azure.identity import DefaultAzureCredential;
 ...
 
-var resourceClient = new ResourceClient(subscriptionId, new DefaultAzureCredential(true));
+credentials = DefaultAzureCredential()
+resourceClient = azure.mgmt.resource.ResourceManagementClient(credential=credentials,subscripton_id=subscription_id)
 ```
 
-More information regarding .NET SDK authentication can be found at 
-[here](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme?view=azure-dotnet) 
+More information regarding Python SDK authentication using Azure Identity can be found at 
+[here](https://docs.microsoft.com/en-us/python/api/overview/azure/identity-readme?view=azure-python) 
 
 ## Managing Resources
 
@@ -39,8 +41,11 @@ Now that we are authenticated, we can use our REST client to make API calls. Let
 **Create a resouce group**
 
 ```
-var location = "westus2";
-var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync(resourceGroup, new ResourceGroup(location));
+location = "westus2"
+self.group = self.resource_client.resource_groups.create_or_update(
+    group_name,
+    {'location': self.location}
+)
 ```
 
 **Update**
