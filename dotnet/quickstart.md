@@ -47,7 +47,7 @@ var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync(resourceGro
 
 **List all resouce groups**
 ```
-var result = await resourceClient.ResourceGroups.ListAsync(resourceGroup, new ResourceGroup(location));
+var result = await resourceClient.ResourceGroups.ListAsync();
 foreach (var resourceGroup in result) {
     Console.WriteLine("Resouce group: " + resourceGroup.Name);
 }
