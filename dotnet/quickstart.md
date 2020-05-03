@@ -107,6 +107,4 @@ foreach (var resourceGroup in result) {
 ```
 // Delete a resource group
 await resourceClient.ResourceGroups.DeleteAsync(resourceGroupName)
-
-
 ```
