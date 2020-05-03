@@ -70,18 +70,32 @@ More information regarding .NET SDK authentication can be found at
 
 Now that we are authenticated, we can use our REST client to make API calls. Let's create a resource group and demostrate REST client's usage
 
-**Create a resouce group**
+**Create a resource group**
 
 ```
 var location = "westus2";
-var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync(resourceGroup, new ResourceGroup(location));
+var resourceGroupName = "myResourceGroupName";
+var result = await resourceClient.ResourceGroups.CreateOrUpdateAsync(resourceGroupName, new ResourceGroup(location));
 ```
 
-**Update**
+**Update a resource group**
 
-
-**List all resouce groups**
 ```
+var resourceGroupName = "myResourceGroupName";
+// Create tags
+var tags = new Dictionary<string, string>();
+tags.Add("environment","dev");
+tags.Add("business","education");
+group.setTags(tags);
+// Update resource group
+var result = await resourceClient.ResourceGroup.CreateOrUpdateAsync(resourceGroupName, group)
+
+```
+ 
+**List all resource groups**
+
+```
+// List all resource groups
 var result = await resourceClient.ResourceGroups.ListAsync();
 foreach (var resourceGroup in result) {
     Console.WriteLine("Resouce group: " + resourceGroup.Name);
@@ -90,6 +104,9 @@ foreach (var resourceGroup in result) {
 
 **Delete**
 
+```
+// Delete a resource group
+await resourceClient.ResourceGroups.DeleteAsync(resourceGroupName)
 
 
 ```

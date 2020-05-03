@@ -72,33 +72,38 @@ More information regarding Python SDK authentication using Azure Identity can be
 
 Now that we are authenticated, we can use our REST client to make API calls. Let's create a resource group and demostrate REST client's usage
 
-**Create a resouce group**
+**Create a resource group**
 
 ```
 location = "westus2"
+group_name = "my_resource_group_name"
 group = resource_client.resource_groups.create_or_update(
     group_name,
     {'location': location}
 )
 ```
 
-**Update**
+**Update a resource group**
+
+```
+group_name = "my_resource_group_name"
 group.tags = {
     "environment":"test",
     "department":"tech"
 }
 updated_group = resource_client.resource_groups.create_or_update(group_name, group)
+```
 
-**List all resouce groups**
+**List all resource groups**
+
 ```
 group_list = self.resource_client.resource_groups.list()
 for g in group_list:
     print_resource_group(g)
+```
+**Delete a resource group**
 
 ```
-**Delete**
 delete_async_op = self.resource_client.resource_groups.begin_delete(group_name)
 delete_async_op.wait()
-
-
 ```
