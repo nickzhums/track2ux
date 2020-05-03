@@ -4,10 +4,10 @@ In this basic quickstart guide, we will walk you through how to authenticate to 
 
 ## Prerequisites
 You will need the following values to authenticate to Azure
-- Client ID
-- Client Secret
-- Tenant ID
-- Subscription ID
+- **Client ID**
+- **Client Secret**
+- **Tenant ID**
+- **Subscription ID**
 
 These values can be obtained from the portal, here's the instructions:
 
