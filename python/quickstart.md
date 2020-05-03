@@ -1,4 +1,4 @@
-# Welcome to Python SDK UX Study
+# Quickstart Tutorial - Resource Management using Python .NET SDK
 
 In this basic quickstart guide, we will walk you through how to authenticate to Azure using our Python SDK and start interacting with Azure resources. There are several possible approaches to authentication. This document illustrates the most common scenario
 
