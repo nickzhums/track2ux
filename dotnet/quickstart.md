@@ -48,8 +48,13 @@ After you obtained the values, you need to set the following values as your envi
 -   `AZURE_CLIENT_SECRET`
 -   `AZURE_TENANT_ID`
 
-To set environment variables, you can refer to these documentation
-[Windows](https://www.computerhope.com/issues/ch000549.htm) / [Linux](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/)
+To set the following environment variables on your development system:
+
+```
+export AZURE_CLIENT_ID="__CLIENT_ID__"
+export AZURE_CLIENT_SECRET="__CLIENT_SECRET__"
+export AZURE_TENANT_ID="__TENANT_ID__"
+```
 
 ## Authentication and Creating REST Client
 
