@@ -6,14 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Core" Version="1.2.0" />
-    <PackageReference Include="Azure.Identity" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.10.0" />
     <PackageReference Include="Microsoft.Azure.Management.Fluent" Version="1.33.0" />
     <PackageReference Include="Microsoft.Azure.Management.ResourceManager" Version="3.7.0-preview" />
   </ItemGroup>
 
   
   <ItemGroup>
+    <Reference Include="Azure.Core">
+      <HintPath>D:\dev\azure-sdk-for-net\artifacts\bin\Azure.Core\Debug\netstandard2.0\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity">
+      <HintPath>D:\dev\azure-sdk-for-net\artifacts\bin\Azure.Identity\Debug\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
     <Reference Include="Azure.Management.Compute">
       <HintPath>D:\dev\azure-sdk-for-net\artifacts\bin\Azure.Management.Compute\Debug\netstandard2.0\Azure.Management.Compute.dll</HintPath>
     </Reference>
