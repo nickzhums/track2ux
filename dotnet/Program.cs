@@ -12,7 +12,7 @@ namespace Track2UXCodeSample
             
             Console.WriteLine("Hello World!");
 
-            await Track1.CreateResourceAsync(subscripionId, "", "westus2");
+            await Track2.CreateResourceAsync(subscripionId, "", "westus2");
         }
     }
 }

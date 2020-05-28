@@ -6,8 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Core" Version="1.2.0" />
+    <PackageReference Include="Azure.Identity" Version="1.1.1" />
     <PackageReference Include="Microsoft.Azure.Management.Fluent" Version="1.33.0" />
     <PackageReference Include="Microsoft.Azure.Management.ResourceManager" Version="3.7.0-preview" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <Reference Include="Azure.Management.Compute">
+      <HintPath>D:\dev\azure-sdk-for-net\artifacts\bin\Azure.Management.Compute\Debug\netstandard2.0\Azure.Management.Compute.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Management.Network">
+      <HintPath>D:\dev\azure-sdk-for-net\artifacts\bin\Azure.Management.Network\Debug\netstandard2.0\Azure.Management.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Management.Resources">
+      <HintPath>D:\dev\azure-sdk-for-net\artifacts\bin\Azure.Management.Resources\Debug\netstandard2.0\Azure.Management.Resources.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
